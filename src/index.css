@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #050508;
+    color: #f8fafc;
+    font-family: 'Space Grotesk', sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* 3D Perspective & Transform Setup */
+.perspective-viewport {
+  perspective: 1200px;
+  perspective-origin: 50% 50%;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* Custom Grid Background & Lighting Radial Gradients */
+.bg-grid-pattern {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.bg-radial-glow {
+  background: radial-gradient(circle at 50% 45%, rgba(255, 42, 75, 0.18) 0%, rgba(225, 29, 72, 0.05) 45%, transparent 70%);
+}
+
+.bg-radial-blue {
+  background: radial-gradient(circle at 50% 50%, rgba(0, 240, 255, 0.12) 0%, rgba(59, 130, 246, 0.04) 50%, transparent 75%);
+}
+
+/* Dynamic Sneaker Glow */
+.sneaker-glow {
+  box-shadow: 0 0 80px 20px rgba(255, 42, 75, 0.25);
+  filter: drop-shadow(0 25px 35px rgba(0, 0, 0, 0.9));
+}
+
+.sneaker-drop-shadow {
+  filter: drop-shadow(0 30px 45px rgba(0, 0, 0, 0.85)) drop-shadow(0 0 25px rgba(255, 42, 75, 0.3));
+}
+
+/* 3D Perspective Dynamic Floor Shadow */
+.sneaker-shadow-ellipse {
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.4) 40%, transparent 75%);
+  filter: blur(12px);
+  transform: rotateX(75deg) translateZ(-40px);
+}
+
+/* Text Stroke & Glow Effects */
+.text-stroke-accent {
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.2);
+  color: transparent;
+}
+
+.text-stroke-solid {
+  -webkit-text-stroke: 1.5px #ff2a4b;
+  color: transparent;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050508;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #262636;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff2a4b;
+}
+
+/* Reduced Motion Override */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+

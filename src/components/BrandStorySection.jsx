@@ -122,3 +122,4 @@ export default function BrandStorySection({ imageMode }) {
     </section>
   );
 }
+

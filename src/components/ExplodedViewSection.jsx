@@ -213,3 +213,4 @@ export default function ExplodedViewSection({ imageMode }) {
     </section>
   );
 }
+

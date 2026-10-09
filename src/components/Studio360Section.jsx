@@ -171,3 +171,4 @@ export default function Studio360Section({ imageMode }) {
     </section>
   );
 }
+

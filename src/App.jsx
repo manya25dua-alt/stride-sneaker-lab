@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
+import ParticleCanvas from './components/ParticleCanvas';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import MotionSection from './components/MotionSection';
+import ExplodedViewSection from './components/ExplodedViewSection';
 import EngineeredSection from './components/EngineeredSection';
+import BrandStorySection from './components/BrandStorySection';
+import Studio360Section from './components/Studio360Section';
 import FinalImpactSection from './components/FinalImpactSection';
 import Footer from './components/Footer';
 
@@ -18,25 +22,37 @@ export default function App() {
 
   return (
     <div className="relative min-h-screen bg-[#050508] text-slate-100 overflow-x-hidden selection:bg-red-500 selection:text-white">
-      {/* Navbar Header */}
+      {/* Background Zero-G Particle Dust */}
+      <ParticleCanvas />
+
+      {/* Glassmorphism Header */}
       <Navbar 
         imageMode={imageMode} 
         setImageMode={setImageMode} 
         onReplay={handleReplay} 
       />
 
-      {/* Main Content Sections */}
-      <main>
-        {/* Section 01: Hero 3D Floating Sneaker */}
+      {/* Main Cinematic Sections */}
+      <main className="relative z-10">
+        {/* 01. Hero Section — Floating 3D Sneaker with Lerped Mouse Physics */}
         <HeroSection imageMode={imageMode} />
 
-        {/* Section 02: Motion Sequence (GSAP ScrollTrigger Pinned) */}
+        {/* 02. Motion Section — GSAP ScrollTrigger Pinned Sequence */}
         <MotionSection imageMode={imageMode} />
 
-        {/* Section 03: Engineered Specification Spotlights */}
+        {/* 03. Architecture Section — 3D Exploded Layer Breakdown */}
+        <ExplodedViewSection imageMode={imageMode} />
+
+        {/* 04. Specs Section — Precision Feature Spotlights */}
         <EngineeredSection imageMode={imageMode} />
 
-        {/* Section 04: Final Impact & Replay */}
+        {/* 05. Brand Story — Manifesto, Bento Stats, Craft Pillars */}
+        <BrandStorySection imageMode={imageMode} />
+
+        {/* 06. 360 Inspect Studio — Interactive Drag & Theme Controls */}
+        <Studio360Section imageMode={imageMode} />
+
+        {/* 07. Final Impact — Zoom Orbit & Replay Experience */}
         <FinalImpactSection imageMode={imageMode} onReplay={handleReplay} />
       </main>
 
@@ -45,4 +61,3 @@ export default function App() {
     </div>
   );
 }
-

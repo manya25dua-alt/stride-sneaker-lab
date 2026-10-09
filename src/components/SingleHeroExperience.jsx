@@ -336,3 +336,4 @@ export default function SingleHeroExperience({ imageMode, setImageMode }) {
     </div>
   );
 }
+

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#010101" />
+  <title>Nova 01 · Run light</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="https://prompts.picsmob.com/frames/nova/frame_0001.jpg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav">
+    <a class="logo" href="#top">NOVA</a>
+    <div class="links">
+      <a href="#specs">Tech</a>
+      <a href="#specs">Specs</a>
+      <a href="#order">Stores</a>
+    </div>
+    <a class="btn btn-sm" href="#order">Pre-order ₹12,999</a>
+  </nav>
+
+  <main>
+    <section class="scroll" id="top">
+      <div class="stage">
+        <div class="word word-run anton" aria-hidden="true">RUN</div>
+        <div class="word word-light anton" aria-hidden="true">LIGHT</div>
+        <canvas class="canvas" aria-label="Nova 01 running shoe rotating"></canvas>
+
+        <div class="overlay">
+          <div class="b1">
+            <p class="mono rise" style="animation-delay:0.5s;color:var(--orange)">Nova 01 — road runner</p>
+            <p class="b1-copy rise" style="animation-delay:0.65s">The lightest shoe we have ever made. Scroll to turn it.</p>
+          </div>
+
+          <div class="b2">
+            <h2 class="b2-head anton">FEELS<br />LIKE<br /><span>NOTHING.</span></h2>
+            <div class="b2-right">
+              <p class="b2-copy">One piece of foam, tuned to give back more than you put in. A light strip runs through it, so you are seen before you are heard.</p>
+              <div class="big anton">198<small>g</small></div>
+              <p class="mono">Size 9, the lightest in its class</p>
+            </div>
+          </div>
+
+          <div class="b3">
+            <div class="callouts">
+              <div class="callout" data-x="0.695" data-y="0.25" data-dx="150" data-dy="-70" style="--c:var(--c0)">
+                <svg class="line" width="1" height="1"><line x1="0" y1="0" x2="0" y2="0"/></svg>
+                <span class="dot"></span>
+                <div class="label"><span class="mono">Glow heel loop</span><strong class="anton">Seen at 200 m</strong></div>
+              </div>
+              <div class="callout" data-x="0.55" data-y="0.4" data-dx="340" data-dy="60" style="--c:var(--c1)">
+                <svg class="line" width="1" height="1"><line x1="0" y1="0" x2="0" y2="0"/></svg>
+                <span class="dot"></span>
+                <div class="label"><span class="mono">Engineered mesh</span><strong class="anton">198 g, size 9</strong></div>
+              </div>
+              <div class="callout left" data-x="0.42" data-y="0.58" data-dx="-250" data-dy="90" style="--c:var(--c2)">
+                <svg class="line" width="1" height="1"><line x1="0" y1="0" x2="0" y2="0"/></svg>
+                <span class="dot"></span>
+                <div class="label"><span class="mono">Nova Foam + light strip</span><strong class="anton">38% more return</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="rail"><i></i></div>
+        <div class="counter mono"><span style="color:var(--orange)">01</span> / 03</div>
+        <div class="loadbar"><i></i></div>
+      </div>
+    </section>
+
+    <section id="specs" class="sec reveal">
+      <p class="mono kicker">The numbers</p>
+      <h2 class="h anton">Made to disappear<br />on your foot.</h2>
+      <div class="specs">
+        <div class="spec"><div class="num anton">198 g</div><p class="mono">Weight</p><p class="spec-t">Size 9. Lighter than most racing flats.</p></div>
+        <div class="spec"><div class="num anton">38%</div><p class="mono">Energy return</p><p class="spec-t">Nova Foam gives back more with every stride.</p></div>
+        <div class="spec"><div class="num anton">8 mm</div><p class="mono">Drop</p><p class="spec-t">Heel to toe, for an easy, rolling landing.</p></div>
+        <div class="spec"><div class="num anton">200 m</div><p class="mono">Glow</p><p class="spec-t">The light strip charges in daylight, glows at night.</p></div>
+      </div>
+    </section>
+
+    <section id="order" class="sec order reveal">
+      <img class="order-img" src="https://prompts.picsmob.com/frames/nova/frame_0120.jpg" alt="Nova 01, heel view with orange smoke" />
+      <div>
+        <p class="mono kicker">First drop · ships March 2027</p>
+        <h2 class="h anton">Your next PB<br />starts here.</h2>
+        <p class="price anton">₹12,999</p>
+        <p class="mono">Pick your size (UK)</p>
+        <div class="sizes">
+          <button class="size" aria-pressed="false">6</button>
+          <button class="size" aria-pressed="false">7</button>
+          <button class="size" aria-pressed="false">8</button>
+          <button class="size on" aria-pressed="true">9</button>
+          <button class="size" aria-pressed="false">10</button>
+          <button class="size" aria-pressed="false">11</button>
+          <button class="size" aria-pressed="false">12</button>
+        </div>
+        <button class="btn" id="reserve">Pre-order now</button>
+        <p class="fine">Free returns for 30 days. Pay nothing until it ships.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span class="logo">NOVA</span>
+    <span>A concept product. © 2027 Nova Running.</span>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,6 +1,6 @@
 import React from 'react';
-import StridePureStage from './components/StridePureStage';
+import StrideLanding from './components/StrideLanding';
 
 export default function App() {
-  return <StridePureStage />;
+  return <StrideLanding />;
 }
